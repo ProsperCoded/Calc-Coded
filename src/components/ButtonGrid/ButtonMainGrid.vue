@@ -22,7 +22,7 @@
     <CalcButton @click="addNumber(0)" style="grid-column: -1 / 2">
       0
     </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.decimal)" style="grid-row: 4/5">
+    <CalcButton @click="evaluateExpression(Exp.decimal)" style="grid-row: 5/6">
       .
     </CalcButton>
   </div>
@@ -47,10 +47,6 @@ export default defineComponent({
       Exp,
     };
   },
-  // emits: {
-  //   addNumber: (n: number) => {},
-  //   evaluateExpression: (e: Exp) => {},
-  // },
   emits: ["addNumber", "evaluateExpression"],
   methods: {
     addNumber(n: number | string) {

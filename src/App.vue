@@ -9,10 +9,10 @@ import {
   computed,
 } from "vue";
 import { RouterLink, RouterView } from "vue-router";
-// import globalStyles from "./styles/_globalMixins.scss";
 import CalcDisplay from "./components/CalcDisplay.vue";
 import ButtonGrid from "./components/ButtonGrid/ButtonGrid.vue";
 import { Exp } from "./types";
+import { commaSeparateNumber, filterExpressionCharacters } from "@/utils";
 
 const regexIntegers = /(\d+)(?=\W|$)/g;
 const regexRealNumbers = /(\d+(\.\d+)?)(?=\W|$)/g;
@@ -25,22 +25,15 @@ export default defineComponent({
   setup() {
     const state = reactive({
       expression: "",
-      // displayExpression: "",
       secondaryExpression: "",
-
       result: 0,
     });
     const userFriendlyExpression = computed(() => {
-      return state.expression
-        .replace("**", "^")
-        .replace("*", "x")
-        .replace("/", "÷");
+      return filterExpressionCharacters(state.expression);
     });
+
     const userFriendlySecondaryExpression = computed(() => {
-      return state.secondaryExpression
-        .replace("**", "^")
-        .replace("*", "x")
-        .replace("/", "÷");
+      return filterExpressionCharacters(state.secondaryExpression);
     });
     return {
       ...toRefs(state),
