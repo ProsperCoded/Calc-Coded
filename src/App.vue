@@ -11,6 +11,7 @@ import {
 import { RouterLink, RouterView } from "vue-router";
 import CalcDisplay from "./components/CalcDisplay.vue";
 import ButtonGrid from "./components/ButtonGrid/ButtonGrid.vue";
+// import logoIco from "./assets/logo.png";
 import { Exp } from "./types";
 import { commaSeparateNumber, filterExpressionCharacters } from "@/utils";
 
@@ -138,6 +139,7 @@ export default defineComponent({
 
 <template>
   <div id="main">
+    <img src="./assets/logo.ico" alt="" class="logo-icon" />
     <CalcDisplay
       :expression="userFriendlyExpression"
       :secondaryExpression="userFriendlySecondaryExpression"
@@ -151,17 +153,29 @@ export default defineComponent({
 
 <style lang="scss">
 @use "./styles/_globalMixins.scss" as x;
+.logo-icon {
+  width: 4rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  // filter: grayscale(100%);
+  opacity: 0.5;
+}
+#app {
+  // padding: 0 1rem;
+}
 #main {
   // color: red;
   // min-width: fit-content;
-  width: min(600px, 95vw);
-  max-width: min(600px, 95vw);
-  height: min(800px, 95vh);
+  // width: min(600px, 95vw);
+  // max-width: min(600px, 95vw);
+  height: 95vh;
   margin: 1vmin auto;
-
+  position: relative;
   // border: 2px solid rgb(var(--color-dark));
   border-radius: 1em;
   padding: 1em 2vmin;
+  aspect-ratio: 2.7/4;
   background: radial-gradient(
     circle at bottom right,
     rgba(var(--code-light), 0.1),

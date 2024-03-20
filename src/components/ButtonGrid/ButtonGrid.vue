@@ -32,6 +32,7 @@ export default defineComponent({
 @use "@/styles/_globalMixins.scss" as x;
 @include x.generateGridClasses(5, 5);
 .button-grid {
+  margin-top: 25%;
   height: 80%;
   width: 100%;
   // background-color: rgba(var(--code-light), 0.5);

@@ -47,14 +47,19 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .display {
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 20%;
-  width: 100%;
   text-align: right;
   line-height: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   letter-spacing: 0.4ch;
+  right: 0;
+  margin: 0 auto;
+  max-width: 95%;
 }
 .display__primary {
   color: rgba(var(--code-dark), 0.6);
@@ -64,6 +69,7 @@ export default defineComponent({
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0 2rem;
+  white-space: nowrap;
   $border-radius: 2rem;
   &::-webkit-scrollbar {
     width: 5px;

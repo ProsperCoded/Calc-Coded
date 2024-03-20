@@ -66,8 +66,8 @@ export default defineComponent({
   height: 100%;
   padding: 2%;
   // gap: 0.5em;
-  row-gap: calc(1em + 2vh);
-  column-gap: calc(0.5em + 2vw);
+  row-gap: 3vw;
+  column-gap: 3vw;
   direction: rtl;
   grid-area: L;
 }

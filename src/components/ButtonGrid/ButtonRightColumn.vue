@@ -36,20 +36,12 @@ export default {
   grid-area: R;
   justify-items: stretch;
   align-items: stretch;
-  row-gap: calc(1em + 2vh);
-  column-gap: calc(0.5em + 2vw);
-  padding: 1em;
+  row-gap: 3vw;
+  column-gap: 3vw;
   width: 90%;
   justify-self: right;
-  // position: relative;
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   height: 100%;
-  //   width: 0.5em;
-  //   background-color: rgba(var(--code-light), 0.8);
-  //   top: 0;
-  //   right: 105%;
-  // }
+  @media screen and (min-width: 800px) {
+    padding: 1em;
+  }
 }
 </style>
