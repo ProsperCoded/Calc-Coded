@@ -36,7 +36,7 @@ export default {
   grid-area: T;
   margin-bottom: 2%;
   .calc-button {
-    height: min(4em, 80%);
+    // height: min(4em, 80%);
     border-radius: 20px;
     width: 70%;
     min-height: fit-content;

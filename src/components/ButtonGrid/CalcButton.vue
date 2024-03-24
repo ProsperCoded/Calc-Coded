@@ -19,8 +19,10 @@ export default defineComponent({
 @use "@/styles/_globalMixins.scss" as x;
 .calc-button {
   // width: calc(4em + 2.5vw);
-  min-width: 5em;
-  min-height: 5em;
+  // min-width: 5em;
+  // min-height: 5em;
+  width: 100%;
+  height: 100%;
   // width: 5em;
   // height: calc(4em + 3vw);
   // padding: 1em;

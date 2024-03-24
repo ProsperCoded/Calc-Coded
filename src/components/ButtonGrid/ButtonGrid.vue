@@ -33,7 +33,7 @@ export default defineComponent({
 @include x.generateGridClasses(5, 5);
 .button-grid {
   margin-top: 25%;
-  height: 80%;
+  // height: fit-content;
   width: 100%;
   // background-color: rgba(var(--code-light), 0.5);
   display: grid;
@@ -45,5 +45,6 @@ export default defineComponent({
     "L L L R"
     "L L L R";
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1fr 1fr 1fr 1fr;
 }
 </style>

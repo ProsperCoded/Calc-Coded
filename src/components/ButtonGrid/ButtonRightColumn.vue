@@ -42,6 +42,8 @@ export default {
   justify-self: right;
   @media screen and (min-width: 800px) {
     padding: 1em;
+    row-gap: 1.5vw;
+    column-gap: 1.5vw;
   }
 }
 </style>

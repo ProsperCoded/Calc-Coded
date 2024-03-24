@@ -169,10 +169,12 @@ export default defineComponent({
   // min-width: fit-content;
   // width: min(600px, 95vw);
   // max-width: min(600px, 95vw);
-  height: 95vh;
+  max-height: 95vh;
+  height: fit-content;
   margin: 1vmin auto;
   position: relative;
   // border: 2px solid rgb(var(--color-dark));
+  max-width: 90vw;
   border-radius: 1em;
   padding: 1em 2vmin;
   aspect-ratio: 2.7/4;

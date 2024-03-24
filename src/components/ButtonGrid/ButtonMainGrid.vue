@@ -66,8 +66,13 @@ export default defineComponent({
   height: 100%;
   padding: 2%;
   // gap: 0.5em;
+
   row-gap: 3vw;
   column-gap: 3vw;
+  @media screen and (min-width: 800px) {
+    row-gap: 1.5vw;
+    column-gap: 1.5vw;
+  }
   direction: rtl;
   grid-area: L;
 }
