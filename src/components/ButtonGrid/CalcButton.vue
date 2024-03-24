@@ -1,5 +1,8 @@
 <template>
-  <div :class="{ 'calc-button': true, active: active }" tabindex="1">
+  <div
+    tabindex="1"
+    :class="'calc-button ' + `key-${value} ` + (active && 'active')"
+  >
     <span class="value"> <slot></slot></span>
   </div>
 </template>
@@ -8,9 +11,16 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "CalcButton",
+  props: {
+    value: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       active: false,
+      // value:
     };
   },
 });

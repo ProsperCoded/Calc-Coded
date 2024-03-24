@@ -1,9 +1,19 @@
 <template>
   <div class="button-top-row grid-1x4">
-    <CalcButton @click="evaluateExpression(Exp.percent)"> % </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.deg)"> deg </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.AC)"> AC </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.delete)" class="delete">
+    <CalcButton value="%" @click="evaluateExpression(Exp.percent)">
+      %
+    </CalcButton>
+    <CalcButton value="deg" @click="evaluateExpression(Exp.deg)">
+      deg
+    </CalcButton>
+    <CalcButton value="esc" @click="evaluateExpression(Exp.AC)">
+      AC
+    </CalcButton>
+    <CalcButton
+      value="Backspace"
+      @click="evaluateExpression(Exp.delete)"
+      class="delete"
+    >
       <DeleteIcon />
     </CalcButton>
   </div>

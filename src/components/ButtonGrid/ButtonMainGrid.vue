@@ -1,28 +1,32 @@
 <template>
   <div class="grid-5x3 button-main-grid">
-    <CalcButton @click="evaluateExpression(Exp.division)">
+    <CalcButton value="/" @click="evaluateExpression(Exp.division)">
       <DivisionIcon />
     </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.exponent)">
+    <CalcButton value="^" @click="evaluateExpression(Exp.exponent)">
       <PowerIcon
     /></CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.squareRoot)">
+    <CalcButton value="square-root" @click="evaluateExpression(Exp.squareRoot)">
       <SquareRootIcon />
     </CalcButton>
 
-    <CalcButton @click="addNumber(9)"> 9 </CalcButton>
-    <CalcButton @click="addNumber(8)"> 8 </CalcButton>
-    <CalcButton @click="addNumber(7)"> 7 </CalcButton>
-    <CalcButton @click="addNumber(6)"> 6 </CalcButton>
-    <CalcButton @click="addNumber(5)"> 5 </CalcButton>
-    <CalcButton @click="addNumber(4)"> 4 </CalcButton>
-    <CalcButton @click="addNumber(3)"> 3 </CalcButton>
-    <CalcButton @click="addNumber(2)"> 2 </CalcButton>
-    <CalcButton @click="addNumber(1)"> 1 </CalcButton>
-    <CalcButton @click="addNumber(0)" style="grid-column: -1 / 2">
+    <CalcButton value="9" @click="addNumber(9)"> 9 </CalcButton>
+    <CalcButton value="8" @click="addNumber(8)"> 8 </CalcButton>
+    <CalcButton value="7" @click="addNumber(7)"> 7 </CalcButton>
+    <CalcButton value="6" @click="addNumber(6)"> 6 </CalcButton>
+    <CalcButton value="5" @click="addNumber(5)"> 5 </CalcButton>
+    <CalcButton value="4" @click="addNumber(4)"> 4 </CalcButton>
+    <CalcButton value="3" @click="addNumber(3)"> 3 </CalcButton>
+    <CalcButton value="2" @click="addNumber(2)"> 2 </CalcButton>
+    <CalcButton value="1" @click="addNumber(1)"> 1 </CalcButton>
+    <CalcButton value="0" @click="addNumber(0)" style="grid-column: -1 / 2">
       0
     </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.decimal)" style="grid-row: 5/6">
+    <CalcButton
+      value="."
+      @click="evaluateExpression(Exp.decimal)"
+      style="grid-row: 5/6"
+    >
       .
     </CalcButton>
   </div>

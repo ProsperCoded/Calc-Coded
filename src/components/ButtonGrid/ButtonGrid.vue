@@ -18,6 +18,16 @@ import ButtonMainGrid from "./ButtonMainGrid.vue";
 import ButtonTopRow from "./ButtonTopRow.vue";
 import ButtonRightColumn from "./ButtonRightColumn.vue";
 import type { Exp } from "@/types";
+document.addEventListener("keydown", (e) => {
+  let key = e.key;
+  console.log("key pressed was", key);
+  if (key === "Enter") key = "=";
+  let element = document.getElementsByClassName(`key-${key}`)[0];
+  if (element) {
+    (element as any).click();
+    console.log("just clicked");
+  }
+});
 export default defineComponent({
   name: "ButtonGrid",
   // props: {},

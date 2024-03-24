@@ -1,11 +1,18 @@
 <template>
   <div class="grid-5x1 button-right-column">
-    <CalcButton @click="evaluateExpression(Exp.multiplication)"> X </CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.subtraction)"> -</CalcButton>
-    <CalcButton @click="evaluateExpression(Exp.addition)"> +</CalcButton>
+    <CalcButton value="*" @click="evaluateExpression(Exp.multiplication)">
+      X
+    </CalcButton>
+    <CalcButton value="-" @click="evaluateExpression(Exp.subtraction)">
+      -</CalcButton
+    >
+    <CalcButton value="+" @click="evaluateExpression(Exp.addition)">
+      +</CalcButton
+    >
     <CalcButton
       @click="evaluateExpression(Exp.equals)"
       style="grid-row: span 2"
+      value="="
     >
       =
     </CalcButton>

@@ -153,22 +153,21 @@ export default defineComponent({
 
 <style lang="scss">
 @use "./styles/_globalMixins.scss" as x;
+.body {
+  // background-image:
+}
 .logo-icon {
   width: 4rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
-  // filter: grayscale(100%);
+
   opacity: 0.5;
 }
 #app {
   // padding: 0 1rem;
 }
 #main {
-  // color: red;
-  // min-width: fit-content;
-  // width: min(600px, 95vw);
-  // max-width: min(600px, 95vw);
   max-height: 95vh;
   height: fit-content;
   margin: 1vmin auto;
